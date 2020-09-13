@@ -11,7 +11,8 @@ public class Commands extends ListenerAdapter {
 		this.prefix = prefix;
 	}
 	
-	public void onGuildMessageReceive(GuildMessageReceivedEvent event) {
+	@Override
+	public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
 		String[] messageArgs = event.getMessage().getContentRaw().split(" ");
 		System.out.println("MESSAGE SENT");
 		
