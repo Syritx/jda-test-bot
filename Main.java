@@ -13,7 +13,7 @@ public class Main {
 		
 		jda = new JDABuilder(AccountType.BOT).setToken(BotConfig.token).build();
 		jda.getPresence().setStatus(OnlineStatus.IDLE);
-		//jda.getPresence().setActivity(Activity.playing("Online"));
+		jda.getPresence().setActivity(Activity.playing("Online"));
 		
 		jda.addEventListener(cmds);
 		System.out.println("ADDED COMMANDS");
